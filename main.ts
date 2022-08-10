@@ -1,4 +1,4 @@
-let coffee_response = "..."
+let response = "..."
 function on_start() {
     
     esp8266.init(SerialPin.P16, SerialPin.P15, BaudRate.BaudRate115200)
@@ -20,11 +20,12 @@ function on_start() {
         return
     }
     
-    coffee_response = esp8266.getCoffeeRequest(1)
+    // response = esp8266.get_coffee_request(1)
+    response = esp8266.pickRequest()
 }
 
 on_start()
 basic.forever(function on_forever() {
-    basic.showString(coffee_response)
+    basic.showString(response)
     
 })

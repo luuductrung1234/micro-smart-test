@@ -1,7 +1,8 @@
-coffee_response = '...'
+response = '...'
 
 def on_start():
-    global coffee_response
+    global response
+
     esp8266.init(SerialPin.P16, SerialPin.P15, BaudRate.BAUD_RATE115200)
     if esp8266.is_esp8266_initialized():
         basic.show_icon(IconNames.YES)
@@ -17,10 +18,11 @@ def on_start():
     else:
         basic.show_icon(IconNames.SAD)
         return
-    coffee_response = esp8266.get_coffee_request(1)
+    #response = esp8266.get_coffee_request(1)
+    response = esp8266.pick_request()
 
 def on_forever():
-    basic.show_string(coffee_response)
+    basic.show_string(response)
     pass
 
 on_start()
