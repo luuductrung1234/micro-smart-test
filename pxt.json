@@ -1,0 +1,29 @@
+{
+    "name": "test",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "pxt-sonar": "github:microsoft/pxt-sonar#v0.0.5",
+        "pxt-rekabit": "github:cytrontechnologies/pxt-rekabit#v1.2.2",
+        "custom-esp8266": "github:luuductrung1234/micro-smart-esp8266#master"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "main.py"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "5.0.12",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "pyprj"
+}
